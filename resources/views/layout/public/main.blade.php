@@ -37,7 +37,7 @@
             }
         }
 
-        .wave3{
+        .wave3 {
             animation: wave3 16s linear infinite;
         }
 
@@ -49,8 +49,70 @@
             to {
                 background-position-x: 2000px;
             }
-            
+
         }
+
+        /* Animate the background div up and down */
+        @keyframes bg-float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            /* smaller movement */
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-bg-float {
+            animation: bg-float 6s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        /* Animate the img up and down */
+        @keyframes img-float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            /* bigger movement for foreground */
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-img-float {
+            animation: img-float 4s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .anim{
+    opacity: 0; 
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#ptext{
+   animation-delay: 0.5s; 
+}
+#ianim{
+   animation-delay: 1s; 
+}
     </style>
 </head>
 
