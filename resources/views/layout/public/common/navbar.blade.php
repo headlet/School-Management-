@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="fixed top-0 left-0 w-full bg-transparent mt-2 z-50">
+<nav class="fixed top-0 left-0 w-full z-[1200] py-2  bg-[#113975]">
   <!-- Inner container limited to 80vw -->
   <div class="w-[80vw] mx-auto flex items-center justify-between px-6 py-2">
     
