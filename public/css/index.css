@@ -1,107 +1,167 @@
+.wave {
+    animation: wave 10s linear infinite;
+    will-change: background-position;
+}
 
-        .wave {
-            animation: wave 10s linear infinite;
-            will-change: background-position;
-        }
+.wave2 {
+    animation: wave2 12s linear infinite;
+    will-change: background-position;
+}
 
-        .wave2 {
-            animation: wave2 12s linear infinite;
-            will-change: background-position;
-        }
+@keyframes wave {
+    from {
+        background-position-x: 0;
+    }
 
-        @keyframes wave {
-            from {
-                background-position-x: 0;
-            }
+    to {
+        background-position-x: 2000px;
+    }
+}
 
-            to {
-                background-position-x: 2000px;
-            }
-        }
+@keyframes wave2 {
+    from {
+        background-position-x: 0;
+    }
 
-        @keyframes wave2 {
-            from {
-                background-position-x: 0;
-            }
+    to {
+        background-position-x: -2000px;
+    }
+}
 
-            to {
-                background-position-x: -2000px;
-            }
-        }
+.wave3 {
+    animation: wave3 16s linear infinite;
+}
 
-        .wave3 {
-            animation: wave3 16s linear infinite;
-        }
+@keyframes wave3 {
+    from {
+        background-position-x: 0;
+    }
 
-        @keyframes wave3 {
-            from {
-                background-position-x: 0;
-            }
+    to {
+        background-position-x: 2000px;
+    }
 
-            to {
-                background-position-x: 2000px;
-            }
+}
 
-        }
+/* Animate the background div up and down */
+@keyframes bg-float {
+    0% {
+        transform: translateY(0px);
+    }
 
-        /* Animate the background div up and down */
-        @keyframes bg-float {
-            0% {
-                transform: translateY(0px);
-            }
+    50% {
+        transform: translateY(-10px);
+    }
 
-            50% {
-                transform: translateY(-10px);
-            }
+    /* smaller movement */
+    100% {
+        transform: translateY(0px);
+    }
+}
 
-            /* smaller movement */
-            100% {
-                transform: translateY(0px);
-            }
-        }
+.animate-bg-float {
+    animation: bg-float 6s ease-in-out infinite;
+    will-change: transform;
+}
 
-        .animate-bg-float {
-            animation: bg-float 6s ease-in-out infinite;
-            will-change: transform;
-        }
+/* Animate the img up and down */
+@keyframes img-float {
+    0% {
+        transform: translateY(0px);
+    }
 
-        /* Animate the img up and down */
-        @keyframes img-float {
-            0% {
-                transform: translateY(0px);
-            }
+    50% {
+        transform: translateY(-20px);
+    }
 
-            50% {
-                transform: translateY(-20px);
-            }
+    /* bigger movement for foreground */
+    100% {
+        transform: translateY(0px);
+    }
+}
 
-            /* bigger movement for foreground */
-            100% {
-                transform: translateY(0px);
-            }
-        }
+.animate-img-float {
+    animation: img-float 4s ease-in-out infinite;
+    will-change: transform;
+}
 
-        .animate-img-float {
-            animation: img-float 4s ease-in-out infinite;
-            will-change: transform;
-        }
-
-        .anim{
-    opacity: 0; 
+.anim {
+    opacity: 0;
     transform: translateY(30px);
     animation: moveup 0.5s linear forwards;
 }
 
 @keyframes moveup {
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0px);
     }
 }
 
-#ptext{
-   animation-delay: 0.5s; 
+#ptext {
+    animation-delay: 0.5s;
 }
-#ianim{
-   animation-delay: 1s; 
+
+#ianim {
+    animation-delay: 1s;
 }
+
+.iconan {
+    animation: icon-float 2s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes icon-float {
+    0% {
+        transform: translateY(0px);
+
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.delay-1 {
+    animation-delay: 0s;
+}
+
+.delay-2 {
+    animation-delay: 0.5s;
+}
+
+.delay-3 {
+    animation-delay: 1s;
+}
+
+.display {
+    animation: up 3.5s ease-in-out infinite;
+}
+
+@keyframes up {
+    0% { transform: translateY(0px);}
+
+    50% {transform: translateY(-20px);}
+
+    100% {transform: translateY(0px);}
+}
+
+.dis1{animation-delay: 0s;}
+.dis2{animation-delay: 0.5s;}
+.dis3{animation-delay: 1s;}
+/* .infoan {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: movedown 0.5s linear forwards;
+}
+
+@keyframes movedown {
+    100% {
+        opacity: 1;
+        transform:translateY(0px);
+    }
+} */
