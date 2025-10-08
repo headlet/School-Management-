@@ -17,11 +17,23 @@
                 <span class="hide-on-collapse transition-all duration-500 ease-in-out origin-left">Dashboard</span>
             </a>
 
-            <a href="#" class="flex items-center gap-3 p-3
-                {{ request()->routeIs('Student') ? 'border border-white bg-blue-300 text-white sidebar transition-all duration-300 ease-in-out' : 'text-gray-200 hover:bg-gray-700 sidebar'}} ">
-                <i class="fas fa-chart-bar"></i>
-                <span class="hide-on-collapse transition-all duration-500 ease-in-out origin-left">Students</span>
-            </a>
+            <!-- multiple student -->
+            <button class=" studentbtn w-full flex items-center justify-items-start gap-x-3 p-3 rounded hover:bg-gray-700 focus:outline-none"><i class="fas fa-chart-bar"></i> <span class='hide-on-collapse'>Students</span></button>
+            <ul class='hidden students list list-circle'>
+                <li>
+                    <a href="{{route('student')}}" class="flex items-center gap-3 p-3 font-normal
+                {{ request()->routeIs('student') ? 'border border-white bg-blue-300 text-white sidebar transition-all duration-300 ease-in-out' : 'text-gray-200 hover:bg-gray-700 sidebar'}} ">
+                        <span class="hide-on-collapse transition-all duration-500 ease-in-out origin-left">All Students</span>
+                    </a>
+                </li>
+
+                  <li>
+                    <a href="{{route('addstudent')}}" class="flex items-center gap-3 p-3 font-normal
+                {{ request()->routeIs('addstudent') ? 'border border-white bg-blue-300 text-white sidebar transition-all duration-300 ease-in-out' : 'text-gray-200 hover:bg-gray-700 sidebar'}} ">
+                        <span class="hide-on-collapse transition-all duration-500 ease-in-out origin-left">Add Students</span>
+                    </a>
+                </li>
+            </ul>
 
             <a href="#" class="flex items-center gap-3 p-3
                 {{ request()->routeIs('Employee') ? 'border border-white bg-blue-300 text-white sidebar transition-all duration-300 ease-in-out' : 'text-gray-200 hover:bg-gray-700 sidebar'}} ">
@@ -62,5 +74,10 @@
         $('.sidebar').toggleClass('w-56 w-14');
         $('.main').toggleClass('ml-56 ml-14');
         $('.hide-on-collapse').toggleClass('opacity-0 scale-0');
+        $('.list').addClass('hidden');
+    });
+
+    $('.studentbtn').click(function() {
+        $('.students').toggleClass('hidden');
     });
 </script>
